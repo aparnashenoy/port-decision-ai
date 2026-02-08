@@ -1,70 +1,70 @@
 {
   "model_performance": {
     "performance_summary": "The model shows good predictive performance with room for improvement.",
-    "mae_interpretation": "Mean Absolute Error: 5.82 minutes (moderate). The model provides reasonable predictions but may benefit from more features or data. On average, predictions are within 5.8 minutes of actual delays.",
-    "rmse_interpretation": "Root Mean Squared Error: 6.34 minutes (moderate). This metric penalizes large errors more heavily. A value of 6.3 minutes indicates the model handles most cases well, with occasional larger errors.",
-    "mape_interpretation": "Mean Absolute Percentage Error: 20.8% (moderate). The model's predictions are on average 20.8% off from actual delays.",
-    "uncertainty_interpretation": "Prediction Interval Coverage: 3.0% (needs_improvement). The uncertainty estimates are not well-calibrated and should be refined. Mean interval width: 4.29 minutes, indicating low prediction uncertainty.",
+    "mae_interpretation": "Mean Absolute Error: 6.11 minutes (moderate). The model provides reasonable predictions but may benefit from more features or data. On average, predictions are within 6.1 minutes of actual delays.",
+    "rmse_interpretation": "Root Mean Squared Error: 6.54 minutes (moderate). This metric penalizes large errors more heavily. A value of 6.5 minutes indicates the model handles most cases well, with occasional larger errors.",
+    "mape_interpretation": "Mean Absolute Percentage Error: 22.0% (moderate). The model's predictions are on average 22.0% off from actual delays.",
+    "uncertainty_interpretation": "Prediction Interval Coverage: 0.7% (needs_improvement). The uncertainty estimates are not well-calibrated and should be refined. Mean interval width: 3.56 minutes, indicating low prediction uncertainty.",
     "business_impact": []
   },
   "feature_insights": {
-    "summary": "Top 10 features account for 79.9% of total importance",
+    "summary": "Top 10 features account for 81.8% of total importance",
     "top_features": [
       {
-        "feature": "resource_allocation_lag_4",
-        "importance": 791778.0218372345
-      },
-      {
-        "feature": "planned_schedule_rolling_mean_3h",
-        "importance": 150281.49655342102
-      },
-      {
-        "feature": "resource_allocation_lag_2",
-        "importance": 117922.08151817322
-      },
-      {
-        "feature": "resource_allocation_lag_8",
-        "importance": 107049.31154060364
+        "feature": "resource_allocation_lag_1",
+        "importance": 359153.08226776123
       },
       {
         "feature": "workload",
-        "importance": 65389.33322143555
+        "importance": 296136.3699569702
       },
       {
-        "feature": "workload_rolling_mean_1h",
-        "importance": 56539.36852836609
+        "feature": "workload_lag_1",
+        "importance": 176791.62862205505
       },
       {
-        "feature": "workload_lag_2",
-        "importance": 32531.106128692627
+        "feature": "resource_allocation_lag_4",
+        "importance": 157790.9577922821
       },
       {
-        "feature": "planned_schedule_rolling_sum_3h",
-        "importance": 28746.694997787476
+        "feature": "resource_allocation_lag_8",
+        "importance": 101829.47345352173
       },
       {
-        "feature": "workload_lag_4",
-        "importance": 24807.5881023407
+        "feature": "resource_allocation_lag_2",
+        "importance": 72635.89193153381
       },
       {
-        "feature": "workload_lag_8",
-        "importance": 24115.558799743652
+        "feature": "planned_schedule_rolling_mean_3h",
+        "importance": 72343.04546928406
+      },
+      {
+        "feature": "workload_rolling_mean_3h",
+        "importance": 60567.24306678772
+      },
+      {
+        "feature": "resource_allocation_rolling_mean_3h",
+        "importance": 48259.25410270691
+      },
+      {
+        "feature": "planned_schedule_rolling_mean_6h",
+        "importance": 17178.469326019287
       }
     ],
     "insights": [
-      "**Temporal Dependencies**: 6 lag features in top 10, indicating strong historical patterns. Recent workload and resource allocation are key predictors of delays.",
-      "**Rolling Window Patterns**: 3 rolling window features show that short-term averages (1-6 hours) capture important operational dynamics.",
+      "**Temporal Dependencies**: 5 lag features in top 10, indicating strong historical patterns. Recent workload and resource allocation are key predictors of delays.",
+      "**Rolling Window Patterns**: 4 rolling window features show that short-term averages (1-6 hours) capture important operational dynamics.",
       "**Workload Impact**: Workload features are highly predictive, confirming that operational volume directly correlates with delay risk.",
       "**Resource Management**: Resource allocation features indicate that proper resource planning is critical for minimizing delays."
     ]
   },
   "prediction_statistics": {
-    "mean_predicted_delay": 21.354064043093466,
-    "median_predicted_delay": 21.246444912428373,
-    "std_predicted_delay": 0.8072245287861938,
-    "min_predicted_delay": 19.61821354806916,
-    "max_predicted_delay": 24.975507722350017,
-    "prediction_range": "19.6 - 25.0 minutes"
+    "mean_predicted_delay": 21.04161249999582,
+    "median_predicted_delay": 21.003508099250293,
+    "std_predicted_delay": 0.7964197364940353,
+    "min_predicted_delay": 18.749193703482362,
+    "max_predicted_delay": 23.938873229872456,
+    "prediction_range": "18.7 - 23.9 minutes"
   },
   "recommendations": [
     "Uncertainty estimation needs improvement. Consider using conformal prediction or refining quantile models."
